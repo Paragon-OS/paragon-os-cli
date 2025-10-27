@@ -33,6 +33,7 @@
     "oclif": "^4",
     "shx": "^0.3.3",
     "ts-node": "^10",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   },
   "engines": {
@@ -68,10 +69,18 @@
   "repository": "paragon-os/paragon-os-cli",
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
+    "dev": "node bin/dev.js",
+    "dev:docs": "node bin/dev.js docs",
+    "dev:message": "node bin/dev.js message",
+    "dev:playbook": "node bin/dev.js playbook",
+    "dev:raw": "node bin/dev.js raw",
+    "dev:run": "node bin/dev.js run",
+    "dev:tasks": "node bin/dev.js tasks",
     "lint": "eslint",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "npm run lint",
     "prepack": "oclif manifest && oclif readme",
+    "start": "node bin/dev.js",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
   },
